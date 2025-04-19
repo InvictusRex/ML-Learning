@@ -13,12 +13,12 @@ imputer = SimpleImputer(missing_values=np.nan, strategy='mean')
 imputer.fit(x[:, 1:3])
 x[:, 1:3] = imputer.transform(x[:, 1:3])
 
-#Independant Variable Encoding
+# Independant Variable Encoding / One Hot Endoding
 ct = ColumnTransformer(transformers=[('encoder', OneHotEncoder(), [0])], remainder='passthrough')
 x = np.array(ct.fit_transform(x))
 print(x)
 
-#Dependent Variable Encoding
+# Dependent Variable Encoding
 le = LabelEncoder()
 y = le.fit_transform(y)
 print(y)

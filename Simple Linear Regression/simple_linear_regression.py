@@ -28,9 +28,9 @@ plt.xlabel('Years of Experience')
 plt.ylabel('Salary')
 plt.show()
 
-#For predicting for a specific value
+# For predicting for a specific value
 print(regressor.predict([[12]]))
 
-#Getting the linear regression equation & values of coefficients
+# Getting the linear regression equation & values of coefficients
 print(regressor.coef_)
 print(regressor.intercept_)
